@@ -1,6 +1,6 @@
 /* eslint-disable */
 <template>
-    <div id="pjs" />
+  <div id="pjs" min-height="300px" />
 </template>
 
 <script>

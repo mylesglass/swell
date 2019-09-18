@@ -46,7 +46,9 @@ export default {
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // Doc: https://github.com/Developmint/nuxt-svg-loader
+    'nuxt-svg-loader'
   ],
   /*
   ** Axios module configuration

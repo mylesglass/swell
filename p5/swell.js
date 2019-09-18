@@ -9,7 +9,7 @@ export function main (_p5) {
 
   // Important variables
   const numOfWaves = 10
-  const amplitude = 230
+  const amplitude = 20
   const waves = []
 
   p5.setup = _ => {
