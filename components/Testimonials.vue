@@ -1,38 +1,39 @@
 <template>
   <section class="section">
-    <div class="container">
-      <nav class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <p class="heading-2 has-text-white">
-              Testimonials
-            </p>
-            <br>
-          </div>
-        </div>
-        <div class="level-right">
-          <div class="level-item">
-            <light-bulb-switch v-on:switch-toggled="testesVisible = $event" />
-          </div>
-        </div>
-      </nav>
-      <div v-if="testesVisible" class="columns has-text-white">
-        <ul>
-          <li>perry killed my family and gambled my life savings away.</li>
-          <li>perry introduced me to drugs.</li>
-          <li>perry taught mny son how to huff glue.</li>
-        </ul>
-      </div>
+    <div class="container testimonial-container">
+      <p class="heading-1 has-text-white">
+        Testimonials
+      </p>
+      <chat-bubble
+        position="left"
+        content="Id faucibus nisl tincidunt eget nullam. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Neque vitae tempus quam pellentesque nec. Et netus et malesuada fames ac turpis egestas sed tempus. Id nibh tortor id aliquet lectus. Odio eu feugiat pretium nibh."
+        author="Kanye West"
+      />
+      <chat-bubble
+        position="right"
+        content="Sodales ut eu sem integer vitae justo eget. Id leo in vitae turpis massa sed elementum. Semper feugiat nibh sed pulvinar."
+        author="Barry White"
+      />
+      <chat-bubble
+        position="left"
+        content="Rhoncus est pellentesque elit ullamcorper dignissim. Lectus mauris ultrices eros in cursus turpis massa tincidunt."
+        author="Barack Obama"
+      />
+      <chat-bubble
+        position="right"
+        content="Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt."
+        author="Harry Potter"
+      />
     </div>
   </section>
 </template>
 
 <script>
-import LightBulbSwitch from '~/components/LightBulbSwitch'
+import ChatBubble from '~/components/ChatBubble'
 
 export default {
   components: {
-    LightBulbSwitch
+    ChatBubble
   },
 
   data () {
@@ -44,12 +45,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  padding-left: 2rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  border-radius: 1rem;
-  background-color: #514878;
+.testimonial-container {
+  padding-bottom: 4rem;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="switch">
-    <input type="checkbox" name="toggle" v-model="turnedOn" @click="$emit('switch-toggled', !turnedOn)">
+    <input v-model="turnedOn" type="checkbox" name="toggle" @click="$emit('switch-toggled', !turnedOn)">
     <label for="toggle">
       <i class="bulb">
         <span class="bulb-center" />

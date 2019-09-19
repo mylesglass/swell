@@ -1,7 +1,8 @@
 $hcg-purple: #452b7d;
 
-html {
+body {
   background-color: #111111;
+  font-family: "Inter UI", "Helvetica Neue", Arial, Helvetica, sans-serif; /* 1 */
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -19,7 +20,7 @@ html {
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
+  transform: translateY(20px);
   opacity: 0;
 }
 
@@ -32,11 +33,34 @@ a {
 }
 
 a:hover {
-  color: blue;
+  color: white;
+  text-decoration: underline;
 }
 
 // Typography
 
+.heading-1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
 .heading-2 {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.heading-3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.heading-light {
+  font-size: 1.9rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1.1rem;
+
+  .bold {
+    font-weight: 400;
+  }
 }

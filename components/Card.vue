@@ -44,6 +44,12 @@ export default {
 <style lang="scss" scoped>
 .card {
   min-height: 24rem;
+  border-radius: 0.4rem;
+}
+
+img {
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
 }
 
 .card:hover {
