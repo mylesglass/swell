@@ -1,5 +1,20 @@
 {
   "title": "Fighting",
-  "description": "Quisque sagittis purus sit amet volutpat consequat.",
-  "image": "/images/uploads/2260920_1_o.jpg"
+  "services": [
+    {
+      "title": "Service 1",
+      "description": "This is a description",
+      "image": "/images/uploads/2260920_1_o.jpg"
+    },
+    {
+      "title": "Service 2",
+      "description": "This is a description",
+      "image": "/images/uploads/2260920_1_o.jpg"
+    },
+    {
+      "title": "Service 3",
+      "description": "This is a description",
+      "image": "/images/uploads/2260920_1_o.jpg"
+    }
+  ]
 }
