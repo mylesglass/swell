@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: 'content'
+    label: 'Content'
+    files:
+    - name: 'introduction'
+      label: 'Introduction'
+      file: 'content/intro.json'
+      fields:
+      - { name: 'blurb', label: 'Blurb', widget: 'string' }
+      - { name: 'description', label: 'Description', widget: 'string' }
+    - name: 'services'
+      label: 'Services'
+      file: 'content/services.json'
+      create: true
+      format: 'json'
+      fields:
+      - { name: 'title', label: 'title', widget: 'string' }
+      - { name: 'description', label: 'Description', widget: 'string' }
+      - { name: 'image', label: 'Image', widget: 'image', required: true }  
+    - name: 'contact'
+      label: 'Contact'
+      file: 'content/contact.json'
+      fields:
+      - { name: 'title', label: 'Section Title', widget: 'string' }
+      - { name: 'description', label: 'description', widget: 'string' }
+      - { name: 'email_title', label: 'Email Label', widget: 'string' }
+      - { name: 'email_address', label: 'Email Address', widget: 'string' }
+      - { name: 'phone_title', label: 'Phone Label', widget: 'string' }
+      - { name: 'phone_number', label: 'Phone Number', widget: 'string' }
+    
