@@ -1,0 +1,22 @@
+{
+  "title": "Testimonials",
+  "testimonials": [
+    {
+      "text": "Id faucibus nisl tincidunt eget nullam. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Neque vitae tempus quam pellentesque nec. Et netus et malesuada fames ac turpis egestas sed tempus. Id nibh tortor id aliquet lectus. Odio eu feugiat pretium nibh.",
+      "author": "Kanye West"
+    },
+    {
+      "text": "Sodales ut eu sem integer vitae justo eget. Id leo in vitae turpis massa sed elementum. Semper feugiat nibh sed pulvinar.",
+      "author": "Barry White"
+    },
+    {
+      "text": "Rhoncus est pellentesque elit ullamcorper dignissim. Lectus mauris ultrices eros in cursus turpis massa tincidunt.",
+      "author": "Barack Obama"
+    },
+    {
+      "text": "Expecto Patronum",
+      "author": "Harry Potter"
+    }
+  ],
+  "visible": true
+}
