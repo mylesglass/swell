@@ -1,17 +1,36 @@
 export const state = () => ({
-  introItems: []
+  introItems: [],
+  serviceItems: [],
+  contactItems: []
 })
 
 export const mutations = {
   setIntroItems (state, payload) {
     state.introItems = payload
+  },
+
+  setServiceItems (state, payload) {
+    state.serviceItems = payload
+  },
+
+  setContactItems (state, payload) {
+    state.contactItems = payload
   }
 }
 
 export const actions = {
   async loadIntro ({ commit }) {
-    // eslint-disable-next-line
     const content = await import('~/content/intro.json')
     commit('setIntroItems', content)
+  },
+
+  async loadServices ({ commit }) {
+    const content = await import('~/content/services.json')
+    commit('setServiceItems', content)
+  },
+
+  async loadContact ({ commit }) {
+    const content = await import('~/content/contact.json')
+    commit('setContactItems', content)
   }
 }

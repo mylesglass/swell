@@ -2,15 +2,14 @@
   <section class="section">
     <div class="container">
       <p class="heading-1 has-text-white">
-        Services
+        {{ title }}
       </p>
       <div class="columns is-multiline is-mobile">
-        <service-item icon="phone" title="Fighting" text="Quisque sagittis purus sit amet volutpat consequat." />
-        <service-item icon="email" title="Sparking" text="Etiam erat velit scelerisque in dictum non consectetur." />
-        <service-item icon="check" title="Torture" text="Id nibh tortor id aliquet lectus. Odio eu feugiat pretium nibh." />
-        <service-item icon="home" title="Heaps of stuff" text="Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt." />
-        <service-item icon="account" title="Murder" text="Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt." />
-        <service-item icon="view-dashboard" title="Hacking" text="Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt." />
+        <service-item
+          icon="phone"
+          :title="title"
+          :text="description"
+        />
       </div>
     </div>
   </section>
@@ -22,6 +21,24 @@ import ServiceItem from '~/components/elements/ServiceItem'
 export default {
   components: {
     ServiceItem
+  },
+
+  computed: {
+    title () {
+      return this.$store.state.serviceItems.title
+    },
+
+    description () {
+      return this.$store.state.serviceItems.description
+    },
+
+    image () {
+      return this.$store.state.serviceItems.image
+    }
+  },
+
+  created () {
+    this.$store.dispatch('loadServices')
   }
 }
 </script>
