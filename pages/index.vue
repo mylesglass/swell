@@ -37,13 +37,13 @@
 </template>
 
 <script>
-import Logo from '~/components/AnimatedLogo'
-import Introduction from '~/components/Introduction'
-import Instagram from '~/components/Instagram'
-import Services from '~/components/Services'
-import Testimonials from '~/components/Testimonials'
-import Contact from '~/components/Contact'
-import MGFooter from '~/components/MGFooter'
+import Logo from '~/components/elements/AnimatedLogo'
+import Introduction from '~/components/sections/Introduction'
+import Contact from '~/components/sections/Contact'
+import Services from '~/components/sections/Services'
+import Testimonials from '~/components/sections/Testimonials'
+import Instagram from '~/components/sections/Instagram'
+import MGFooter from '~/components/sections/MGFooter'
 
 export default {
   name: 'HomePage',
@@ -51,10 +51,10 @@ export default {
   components: {
     Logo,
     Introduction,
-    Instagram,
+    Contact,
     Services,
     Testimonials,
-    Contact,
+    Instagram,
     MGFooter
   },
 

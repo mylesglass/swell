@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import ChatBubble from '~/components/ChatBubble'
+import ChatBubble from '~/components/elements/ChatBubble'
 
 export default {
   components: {

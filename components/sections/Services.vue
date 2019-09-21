@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import ServiceItem from '~/components/ServiceItem'
+import ServiceItem from '~/components/elements/ServiceItem'
 
 export default {
   components: {

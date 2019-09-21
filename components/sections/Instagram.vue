@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import Card from '~/components/Card'
+import Card from '~/components/elements/Card'
 import InstagramLogo from '~/assets/instagram-brands.svg'
 
 export default {
