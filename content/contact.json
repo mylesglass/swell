@@ -4,5 +4,6 @@
   "email_title": "Email",
   "email_address": "mailto://perry@swellelectrical.co.nz",
   "phone_title": "Phone",
-  "phone_number": "tel:021834197"
+  "phone_number": "tel:021834197",
+  "visible": true
 }
