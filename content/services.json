@@ -1,5 +1,5 @@
 {
-  "title": "Fighting",
+  "title": "Services",
   "services": [
     {
       "title": "Service 1",
@@ -16,5 +16,6 @@
       "description": "This is a description",
       "image": "/images/uploads/2260920_1_o.jpg"
     }
-  ]
+  ],
+  "visible": true
 }
