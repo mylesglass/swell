@@ -21,14 +21,14 @@ collections:
       file: 'content/services.json'
       fields:
       - { name: 'title', label: 'Title', widget: 'string' }
-      - { name: 'visible', label: 'Show services section?', widget: 'boolean', default: 'true' }
       - name: 'services'
         label: 'Services'
         widget: 'list'
         fields:
         - { name: 'title', label: 'title', widget: 'string' }
         - { name: 'description', label: 'Description', widget: 'string' }
-        - { name: 'image', label: 'Image', widget: 'image'}  }
+        - { name: 'image', label: 'Image', widget: 'image'}
+      - { name: 'visible', label: 'Show services section?', widget: 'boolean', default: 'true' }
 
     - name: 'contact'
       label: 'Contact'
@@ -47,13 +47,13 @@ collections:
       file: 'content/testimonials.json'
       fields:
       - { name: 'title', label: 'Title', widget: 'string' }
-      - { name: 'visible', label: 'Show testimonial section?', widget: 'boolean', default: 'true' }
       - name: 'testimonials'
         label: 'Testimonials'
         widget: 'list'
         fields:
         - { name: 'text', label: 'Testimonial Text', widget: 'string' }
         - { name: 'author', label: 'Author', widget: 'string' }
+      - { name: 'visible', label: 'Show testimonial section?', widget: 'boolean', default: 'true' }
 
     - name: 'instagram'
       label: 'Instagram'
