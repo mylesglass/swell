@@ -6,9 +6,11 @@
       </p>
       <div class="columns is-multiline is-mobile">
         <service-item
-          icon="phone"
-          :title="title"
-          :text="description"
+          v-for="service in services"
+          :key="service.title"
+          :image="service.image"
+          :title="service.title"
+          :text="service.description"
         />
       </div>
     </div>
@@ -28,12 +30,8 @@ export default {
       return this.$store.state.serviceItems.title
     },
 
-    description () {
-      return this.$store.state.serviceItems.description
-    },
-
-    image () {
-      return this.$store.state.serviceItems.image
+    services () {
+      return this.$store.state.serviceItems.services
     }
   },
 

@@ -1,10 +1,8 @@
 <template>
   <div class="column is-4-desktop is-6-tablet is-6-mobile has-text-centered">
-    <b-icon
-      :icon="icon"
-      size="is-large"
-      type="is-light"
-    />
+    <figure class="image">
+      <img :src="image">
+    </figure>
     <p class="heading-2 has-text-white">
       {{ title }}
     </p>
@@ -18,7 +16,7 @@
 export default {
   props: {
     // eslint-disable-next-line
-    icon: String,
+    image: String,
     // eslint-disable-next-line
     title: String,
     // eslint-disable-next-line
