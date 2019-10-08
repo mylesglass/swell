@@ -1,11 +1,11 @@
 <template>
-  <section class="section">
+  <section v-if="visible" class="section">
     <div class="container">
       <nav class="level is-mobile">
         <div class="level-left">
           <div class="level-item">
             <p class="heading-1 has-text-white">
-              Instagram
+              {{ title }}
             </p>
           </div>
         </div>
@@ -16,8 +16,8 @@
         </div>
       </nav>
       <p class="heading-2 has-text-light instagram-name">
-        <a href="https://www.instagram.com/swellelectricalnz/">
-          @swellelectricalnz
+        <a :href="'https://www.instagram.com/' + link">
+          {{ username }}
         </a>
       </p>
       <vue-instagram :token="token" :count="11" media-type="image" class="columns is-multiline is-mobile">
@@ -44,10 +44,30 @@ export default {
     InstagramLogo
   },
 
-  data () {
-    return {
-      token: '210744144.1677ed0.3ab83c55c93440e49c50d9de71d0ebca'
+  computed: {
+    title () {
+      return this.$store.state.instagramItems.title
+    },
+
+    username () {
+      return this.$store.state.instagramItems.username
+    },
+
+    token () {
+      return this.$store.state.instagramItems.token
+    },
+
+    visible () {
+      return this.$store.state.instagramItems.visible
+    },
+
+    link () {
+      return this.$store.state.instagramItems.username.replace(/[@/]/g, '')
     }
+  },
+
+  created () {
+    this.$store.dispatch('loadInstagram')
   }
 }
 </script>

@@ -1,7 +1,9 @@
 export const state = () => ({
   introItems: [],
   serviceItems: [],
-  contactItems: []
+  contactItems: [],
+  testimonialItems: [],
+  instagramItems: []
 })
 
 export const mutations = {
@@ -15,6 +17,14 @@ export const mutations = {
 
   setContactItems (state, payload) {
     state.contactItems = payload
+  },
+
+  setTestimonialItems (state, payload) {
+    state.testimonialItems = payload
+  },
+
+  setInstagramItems (state, payload) {
+    state.instagramItems = payload
   }
 }
 
@@ -32,5 +42,15 @@ export const actions = {
   async loadContact ({ commit }) {
     const content = await import('~/content/contact.json')
     commit('setContactItems', content)
+  },
+
+  async loadTestimonials ({ commit }) {
+    const content = await import('~/content/testimonials.json')
+    commit('setTestimonialItems', content)
+  },
+
+  async loadInstagram ({ commit }) {
+    const content = await import('~/content/instagram.json')
+    commit('setInstagramItems', content)
   }
 }

@@ -13,7 +13,7 @@
 export default {
   props: {
     // eslint-disable-next-line
-    position: String,
+    position: Number,
     // eslint-disable-next-line
     content: String,
     // eslint-disable-next-line
@@ -22,7 +22,7 @@ export default {
 
   computed: {
     trianglePosition () {
-      if (this.position === 'left') {
+      if (this.position % 2 === 0) {
         return true
       } else {
         return false

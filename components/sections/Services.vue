@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section v-if="visible" class="section">
     <div class="container">
       <p class="heading-1 has-text-white">
         {{ title }}
@@ -32,6 +32,10 @@ export default {
 
     services () {
       return this.$store.state.serviceItems.services
+    },
+
+    visible () {
+      return this.$store.state.serviceItems.visible
     }
   },
 

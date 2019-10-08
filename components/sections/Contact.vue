@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section v-if="visible" class="section">
     <div class="container">
       <p class="heading-1 has-text-white">
         {{ title }}
@@ -62,6 +62,10 @@ export default {
 
     phoneNumber () {
       return this.$store.state.contactItems.phone_number
+    },
+
+    visible () {
+      return this.$store.state.contactItems.visible
     }
   },
 
