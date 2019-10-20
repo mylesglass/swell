@@ -12,8 +12,8 @@ collections:
       label: 'Introduction'
       file: 'content/intro.json'
       fields:
-      - { name: 'blurb', label: 'Blurb', widget: 'string' }
-      - { name: 'description', label: 'Description', widget: 'string' }
+      - { name: 'blurb', label: 'Blurb', widget: 'text', hint: 'Larger text directly underneath logo'}
+      - { name: 'description', label: 'Description', widget: 'text', hint: 'Longer description directly below blurb' }
       - { name: 'visible', label: 'Show introduction section?', widget: 'boolean', default: 'true' }
 
     - name: 'services'
@@ -26,7 +26,7 @@ collections:
         widget: 'list'
         fields:
         - { name: 'title', label: 'title', widget: 'string' }
-        - { name: 'description', label: 'Description', widget: 'string' }
+        - { name: 'description', label: 'Description', widget: 'text' }
         - { name: 'image', label: 'Image', widget: 'image'}
       - { name: 'visible', label: 'Show services section?', widget: 'boolean', default: 'true' }
 
@@ -35,7 +35,7 @@ collections:
       file: 'content/contact.json'
       fields:
       - { name: 'title', label: 'Section Title', widget: 'string' }
-      - { name: 'description', label: 'description', widget: 'string' }
+      - { name: 'description', label: 'description', widget: 'text' }
       - { name: 'email_title', label: 'Email Label', widget: 'string' }
       - { name: 'email_address', label: 'Email Address', widget: 'string' }
       - { name: 'phone_title', label: 'Phone Label', widget: 'string' }
@@ -51,7 +51,7 @@ collections:
         label: 'Testimonials'
         widget: 'list'
         fields:
-        - { name: 'text', label: 'Testimonial Text', widget: 'string' }
+        - { name: 'text', label: 'Testimonial Text', widget: 'text' }
         - { name: 'author', label: 'Author', widget: 'string' }
       - { name: 'visible', label: 'Show testimonial section?', widget: 'boolean', default: 'true' }
 
@@ -61,5 +61,5 @@ collections:
       fields:
       - { name: 'title', label: 'Title', widget: 'string' }
       - { name: 'username', label: 'Username', widget: 'string' }
-      - { name: 'token', label: 'Instagram Access Token', widget: 'string' }
+      - { name: 'token', label: 'Instagram Access Token', widget: 'string', hint: 'Generate token at https://instagram.pixelunion.net/'}
       - { name: 'visible', label: 'Show instagram?', widget: 'boolean', default: 'true' }
