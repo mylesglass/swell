@@ -15,6 +15,11 @@
       "title": "Networking",
       "description": "Having the boys over for an 8 person LAN party? We can ensure everyone has a smooth, lag-free experience.",
       "image": "/images/uploads/network.svg"
+    },
+    {
+      "title": "Killing",
+      "description": "This is a description",
+      "image": "/images/uploads/bolt.svg"
     }
   ],
   "visible": true
