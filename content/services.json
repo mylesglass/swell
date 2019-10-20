@@ -3,23 +3,23 @@
   "services": [
     {
       "title": "Electricity",
-      "description": "We will use our dark magic to coerce electricity into your home or business, and enslave it to do your bidding.",
+      "description": "Did you know all qualified electricians spend 2 years studying how to summon lightning?",
       "image": "/images/uploads/bolt.svg"
     },
     {
       "title": "Lighting",
-      "description": "Sometimes you need to see stuff when it's night - we can help with that",
+      "description": "Sometimes you need to see stuff when it's night - we can help with that.",
       "image": "/images/uploads/lightbulb.svg"
     },
     {
       "title": "Networking",
-      "description": "Having the boys over for an 8 person LAN party? We can ensure everyone has a smooth, lag-free experience.",
+      "description": "Having the boys over for an 8-player LAN party? We can ensure everyone has a smooth, lag-free experience.",
       "image": "/images/uploads/network.svg"
     },
     {
-      "title": "Killing",
-      "description": "This is a description",
-      "image": "/images/uploads/bolt.svg"
+      "title": "Wizardry",
+      "description": "We will use our dark magic to coerce electricity into your home or business, and enslave it to do your bidding.",
+      "image": "/images/uploads/wizard-hat.svg"
     }
   ],
   "visible": true
