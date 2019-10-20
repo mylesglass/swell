@@ -2,19 +2,19 @@
   "title": "Services",
   "services": [
     {
-      "title": "Service 1",
-      "description": "This is a description",
-      "image": "/images/uploads/lightbulb-solid.svg"
+      "title": "Electricity",
+      "description": "We will use our dark magic to coerce electricity into your home or business, and enslave it to do your bidding.",
+      "image": "/images/uploads/bolt.svg"
     },
     {
-      "title": "Service 2",
-      "description": "This is a description",
-      "image": "/images/uploads/lightbulb-solid.svg"
+      "title": "Lighting",
+      "description": "Sometimes you need to see stuff when it's night - we can help with that",
+      "image": "/images/uploads/lightbulb.svg"
     },
     {
-      "title": "Service 3",
-      "description": "This is a description",
-      "image": "/images/uploads/2260920_1_o.jpg"
+      "title": "Networking",
+      "description": "Having the boys over for an 8 person LAN party? We can ensure everyone has a smooth, lag-free experience.",
+      "image": "/images/uploads/network.svg"
     }
   ],
   "visible": true
