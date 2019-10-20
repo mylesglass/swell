@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-4-desktop is-4-tablet is-6-mobile has-text-centered">
+  <div class="column is-3-desktop is-3-tablet is-6-mobile has-text-centered">
     <figure class="image is-square is-service-image">
       <img :src="image">
     </figure>
