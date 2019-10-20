@@ -17,5 +17,6 @@ export default {
 <style lang="scss" scoped>
 #pjs {
   margin: auto;
+  min-height: 20rem;
 }
 </style>

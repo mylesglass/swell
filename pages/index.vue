@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Animated Logo -->
-    <div v-if="animatedLogoVisible" class="animated-logo">
+    <div class="animated-logo is-hidden-mobile">
       <logo />
       <figure class="image swell-wordmark">
         <img src="~/assets/SwellElectricalWordmarkWhite.png">
@@ -9,7 +9,7 @@
     </div>
 
     <!-- Static logo for devices/browsers that cannot handle p5.js, or under perform -->
-    <section v-else class="section">
+    <section class="section is-hidden-tablet">
       <div class="container">
         <figure class="image swell-logo">
           <img src="~/assets/SwellElectricalLogoWhite.webp">
@@ -56,12 +56,6 @@ export default {
     Testimonials,
     Instagram,
     MGFooter
-  },
-
-  data () {
-    return {
-      animatedLogoVisible: true
-    }
   }
 }
 </script>

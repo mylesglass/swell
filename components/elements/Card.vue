@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-4-desktop is-6-tablet is-6-mobile">
+  <div class="column is-4-desktop is-4-tablet is-12-mobile">
     <a :href="post.link">
       <div class="card">
         <div class="card-image">

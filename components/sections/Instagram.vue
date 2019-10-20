@@ -20,7 +20,7 @@
           {{ username }}
         </a>
       </p>
-      <vue-instagram :token="token" :count="11" media-type="image" class="columns is-multiline is-mobile">
+      <vue-instagram :token="token" :count="11" media-type="image" class="columns is-multiline">
         <template slot="feeds" slot-scope="props">
           <card :post="props.feed" />
         </template>
