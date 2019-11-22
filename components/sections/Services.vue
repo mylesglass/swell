@@ -1,7 +1,7 @@
 <template>
   <section v-if="visible" class="section">
     <div class="container">
-      <p class="heading-1 has-text-white">
+      <p class="heading-1" :class="textTheme">
         {{ title }}
       </p>
       <div class="columns is-multiline is-mobile">
@@ -11,6 +11,7 @@
           :image="service.image"
           :title="service.title"
           :text="service.description"
+          :theme="theme"
         />
       </div>
     </div>
@@ -21,6 +22,10 @@
 import ServiceItem from '~/components/elements/ServiceItem'
 
 export default {
+  props: {
+    theme: String
+  },
+
   components: {
     ServiceItem
   },
@@ -36,6 +41,13 @@ export default {
 
     visible () {
       return this.$store.state.serviceItems.visible
+    },
+
+    textTheme () {
+      return {
+        'has-text-light': this.theme === 'dark',
+        'has-text-dark': this.theme === 'light'
+      }
     }
   },
 

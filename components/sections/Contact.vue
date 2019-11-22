@@ -1,16 +1,17 @@
 <template>
   <section v-if="visible" class="section">
     <div class="container">
-      <p class="heading-1 has-text-white">
+      <p class="heading-1" :class="textTheme">
         {{ title }}
       </p>
-      <p class="has-text-light">
+      <p :class="textTheme">
         {{ description }}
       </p>
       <div class="field has-addons">
         <p class="control">
           <b-button
-            type="is-dark is-large"
+            :type="buttonTheme"
+            size="is-large"
             inverted
             outlined
             icon-left="email"
@@ -22,7 +23,8 @@
         </p>
         <p class="control">
           <b-button
-            type="is-dark is-large"
+            :type="buttonTheme"
+            size="is-large"
             inverted
             outlined
             icon-left="phone"
@@ -39,6 +41,10 @@
 
 <script>
 export default {
+  props: {
+    theme: String
+  },
+
   computed: {
     title () {
       return this.$store.state.contactItems.title
@@ -66,6 +72,20 @@ export default {
 
     visible () {
       return this.$store.state.contactItems.visible
+    },
+
+    buttonTheme () {
+      return {
+        'is-dark': this.theme === 'dark',
+        'is-light': this.theme === 'light'
+      }
+    },
+
+    textTheme () {
+      return {
+        'has-text-light': this.theme === 'dark',
+        'has-text-dark': this.theme === 'light'
+      }
     }
   },
 

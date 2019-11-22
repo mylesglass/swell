@@ -1,12 +1,12 @@
 <template>
   <div class="column is-3-desktop is-3-tablet is-6-mobile has-text-centered">
-    <figure class="image is-square is-service-image">
-      <img :src="image">
+    <figure class="image is-square is-service-image" :class="iconTheme">
+      <img :src="image" class="imageDark">
     </figure>
-    <p class="heading-2 has-text-white">
+    <p class="heading-2" :class="textTheme">
       {{ title }}
     </p>
-    <p class="has-text-light">
+    <p :class="textTheme">
       {{ text }}
     </p>
   </div>
@@ -20,7 +20,23 @@ export default {
     // eslint-disable-next-line
     title: String,
     // eslint-disable-next-line
-    text: String
+    text: String,
+    theme: String
+  },
+
+  computed: {
+    textTheme () {
+      return {
+        'has-text-light': this.theme === 'dark',
+        'has-text-dark': this.theme === 'light'
+      }
+    },
+
+    iconTheme () {
+      return {
+        'is-invert': this.theme === 'light'
+      }
+    }
   }
 }
 </script>
@@ -29,5 +45,9 @@ export default {
 .is-service-image {
   max-width: 4rem;
   margin: auto;
+}
+
+.is-invert {
+  filter: invert(80%);
 }
 </style>

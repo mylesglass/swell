@@ -4,18 +4,18 @@
       <nav class="level is-mobile">
         <div class="level-left">
           <div class="level-item">
-            <p class="heading-1 has-text-white">
+            <p class="heading-1" :class="textTheme">
               {{ title }}
             </p>
           </div>
         </div>
         <div class="level-right">
           <div class="level-item">
-            <instagram-logo class="instagram-logo" />
+            <instagram-logo class="instagram-logo" :class="igLogoColor"/>
           </div>
         </div>
       </nav>
-      <p class="heading-2 has-text-light instagram-name">
+      <p class="heading-2 instagram-name" :class="linkTextTheme">
         <a :href="'https://www.instagram.com/' + link">
           {{ username }}
         </a>
@@ -39,6 +39,10 @@ import Card from '~/components/elements/Card'
 import InstagramLogo from '~/assets/instagram-brands.svg'
 
 export default {
+  props: {
+    theme: String
+  },
+
   components: {
     Card,
     InstagramLogo
@@ -63,6 +67,28 @@ export default {
 
     link () {
       return this.$store.state.instagramItems.username.replace(/[@/]/g, '')
+    },
+
+    textTheme () {
+      return {
+        'has-text-light': this.theme === 'dark',
+        'has-text-dark': this.theme === 'light'
+      }
+    },
+
+    linkTextTheme () {
+      return {
+        'has-text-light': this.theme === 'dark',
+        'has-text-dark': this.theme === 'light'
+      }
+    },
+
+    igLogoColor () {
+      if (this.theme === 'dark') {
+        return 'ig-dark'
+      } else {
+        return 'ig-white'
+      }
     }
   },
 
@@ -83,6 +109,13 @@ export default {
 
 .instagram-logo {
   min-width: 3rem;
+}
+
+.ig-white {
+  color: black;
+}
+
+.ig-dark {
   color: white;
 }
 </style>
